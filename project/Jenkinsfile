@@ -7,15 +7,7 @@ stages{
         /* Let's make sure we have the repository cloned to our workspace */
 
         checkout "https://github.com/mekulaventure/Jenkinsdockerproject.git"
-    }
-}
-    stage('Build image') {
-        /* This builds the actual image; synonymous to
-         * docker build on the command line */
-	steps {
-        sh 'docker build -t emma/test1'
-	sh 'docker run -p 49160:8080 -d emma/test1'
+		}
 	}
-      }
     }
 }
