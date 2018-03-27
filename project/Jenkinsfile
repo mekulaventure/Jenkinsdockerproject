@@ -1,17 +1,17 @@
-node {
+pipeline {
     def app
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
-        checkout scm
+        checkout "https://github.com/mekulaventure/Jenkinsdockerproject.git"
     }
 
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("emma-hello:1")
+        app = docker.build("emma-hello")
     }
 
     stage('Test image') {
