@@ -1,8 +1,7 @@
-pipeline {
+node {
     def app
 
-   stages{ 
-	stage('Clone repository') {
+    stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
 
         checkout "https://github.com/mekulaventure/Jenkinsdockerproject.git"
@@ -34,6 +33,4 @@ pipeline {
             app.push("latest")
         }
     }
-  }
-
 }
