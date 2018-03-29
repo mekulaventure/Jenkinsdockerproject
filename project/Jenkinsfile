@@ -8,6 +8,11 @@ stages{
 
         checkout "https://github.com/mekulaventure/Jenkinsdockerproject.git"
 		}
+	    stage('Build Image') {
+		    steps {
+			     docker.build("emma-hello")
+		    }
+	    }
 	}
     }
 }
