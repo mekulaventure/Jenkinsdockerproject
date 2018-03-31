@@ -6,7 +6,7 @@ stages{
 	steps {
         /* Let's make sure we have the repository cloned to our workspace */
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'PerBuildTag']], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/mekulaventure/Jenkinsdockerproject.git']]])
-       #  checkout "https://github.com/mekulaventure/Jenkinsdockerproject.git"
+       /* checkout "https://github.com/mekulaventure/Jenkinsdockerproject.git" */
 		}
 	    stage('Build Image') {
 		    steps {
