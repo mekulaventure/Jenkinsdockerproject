@@ -11,7 +11,7 @@ stages{
 	}
 	    stage('Build Image') {
 		    steps {
-			  sh 'docker build -t mynew/node-web-app .'
+			  sh 'docker build emma-hello'
 		    }
 	    }
 	}
