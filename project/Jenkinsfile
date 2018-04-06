@@ -7,6 +7,8 @@ stages{
     stage('Clone repository') {
 	steps {
         /* Let's make sure we have the repository cloned to our workspace */
+         sh 'git config user.email "bredemi@yahoo.com"'
+	 sh 'git config user.name "emeka"'
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'PerBuildTag']], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/mekulaventure/Jenkinsdockerproject.git']]])
        /* checkout "https://github.com/mekulaventure/Jenkinsdockerproject.git" */
 		}
