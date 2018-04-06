@@ -15,7 +15,7 @@ stages{
 	}
 	    stage('Build Image') {
 		    steps {
-			  sh 'cd Jenkinsdockerproject/project'
+			  sh 'cd ~/Jenkinsdockerproject/project'
 			  sh './mytest'
 		    }
 	    }
