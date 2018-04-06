@@ -13,11 +13,11 @@ stages{
        /* checkout "https://github.com/mekulaventure/Jenkinsdockerproject.git" */
 		}
 	}
-	   /* stage('Build Image') {
+	    stage('Build Image') {
 		    steps {
 			  sh './mytest'
 		    }
-	    }*/
+	    }
 	}
     }
 
