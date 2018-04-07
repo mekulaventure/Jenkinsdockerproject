@@ -12,7 +12,7 @@ stages{
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'PerBuildTag']], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/mekulaventure/Jenkinsdockerproject.git']]])
         sh 'pwd'
 	sh 'ls' 
-        sh 'cd ~/workspace/MyTest/Jenkinsdockerproject/project'
+        sh 'cd ~/workspace/MyTest/project'
 	sh './mytest.sh'
 		    }
 	    }
