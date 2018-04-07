@@ -13,7 +13,8 @@ stages{
 	sh 'ls' 
         sh 'cd ~/workspace/MyTest/project'
 	sh 'ls project'
-	sh 'project/mytest.sh'
+	sh 'grep docker /etc/group'
+	/*sh 'project/mytest.sh'*/
 		    }
 	    }
 	}
