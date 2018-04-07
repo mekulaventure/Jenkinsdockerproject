@@ -10,8 +10,7 @@ stages{
          sh 'git config user.email "bredemi@yahoo.com"'
 	 sh 'git config user.name "emeka"'
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'PerBuildTag']], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/mekulaventure/Jenkinsdockerproject.git']]])
-	
-	 sh 'cd /home/student/anya1857/Jenkinsdockerproject/project/'
+
 	 sh './mytest'
 		    }
 	    }
