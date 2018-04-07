@@ -11,8 +11,8 @@ stages{
 	 sh 'git config user.name "emeka"'
         checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'PerBuildTag']], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/mekulaventure/Jenkinsdockerproject.git']]])
         sh 'pwd' 
-        sh 'cp ~/Jenkinsdockerproject/project /var/jenkins_home/workspace'
-	 /*sh './mytest.sh'*/
+        sh 'cd ~/workspace/mytest/Jenkinsproject/project'
+	sh './mytest.sh'
 		    }
 	    }
 	}
