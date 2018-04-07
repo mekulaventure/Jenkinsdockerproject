@@ -13,6 +13,7 @@ stages{
         sh 'pwd'
 	sh 'ls' 
         sh 'cd ~/workspace/MyTest/project'
+	sh 'ls'
 	sh './mytest.sh'
 		    }
 	    }
