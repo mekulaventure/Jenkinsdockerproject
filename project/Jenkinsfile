@@ -14,8 +14,7 @@ stages{
 	sh 'ls' 
         sh 'cd ~/workspace/MyTest/project'
 	sh 'ls project'
-	/*sh 'project/mytest.sh'*/
-	app = docker.build("emma1")
+	sh 'project/mytest.sh'
 		    }
 	    }
 	}
