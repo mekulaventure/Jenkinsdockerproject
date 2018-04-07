@@ -14,7 +14,7 @@ stages{
 	sh 'ls' 
         sh 'cd ~/workspace/MyTest/project'
 	sh 'ls project'
-	sh './mytest.sh'
+	sh 'project/mytest.sh'
 		    }
 	    }
 	}
