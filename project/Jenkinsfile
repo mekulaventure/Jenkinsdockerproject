@@ -2,7 +2,7 @@
 
 pipeline {
     agent any
-          
+          def app
 stages{
     stage('Build Image') {
 	steps {
@@ -15,7 +15,7 @@ stages{
         sh 'cd ~/workspace/MyTest/project'
 	sh 'ls project'
 	/*sh 'project/mytest.sh'*/
-	sh 'app = docker.build("emma1")'
+	app = docker.build("emma1")
 		    }
 	    }
 	}
