@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t emma1 .
+docker build -t myjenk .
