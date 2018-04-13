@@ -13,7 +13,6 @@ stages{
 	sh 'ls' 
         sh 'cd ~/workspace/MyTest/project'
 	sh 'ls project'
-	sh 'USER root'
         sh 'RUN apt-get update'
         sh 'curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -'
 		    }
