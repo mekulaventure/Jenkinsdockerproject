@@ -1,4 +1,4 @@
-pipelines {
+pipeline {
 	def any
 	stages {
     stage('Clone repository') {
