@@ -8,8 +8,8 @@ pipeline {
           }
           stage('deploy stage Stage') {
                steps {
-                    sh 'def server = Artifactory.server 'artifactory server''
-	             sh'  def uploadSpec = {
+                     def server = Artifactory.server 'artifactory server''
+	               def uploadSpec = {
                 def uploadSpec = """{
   		"files": [
     			{
@@ -19,7 +19,7 @@ pipeline {
  				]
 			}"""
 		       server.upload(uploadSpec)
-               }'
+               }
           }
        }
      }
