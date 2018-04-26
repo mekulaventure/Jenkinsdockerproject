@@ -1,15 +1,16 @@
 pipeline {
-           agent any
-           stages {
-                stage('clone repository') {
-                     steps {
-                          scm checkout
-                     }
-                }
-		   stage('hello-world') { 
-			   steps {
-				   echo "Hello world!"
-			   }
-		   }
-           }
-      }
+     agent any
+     stages {
+          stage('First Stage') {
+               steps {
+                    echo 'Step 1. Hello World'
+               }
+          }
+          stage('Second Stage') {
+               steps {
+                    echo 'Step 2. Second time Hello'
+                    echo 'Step 3. Third time Hello'
+               }
+          }
+     }
+}
