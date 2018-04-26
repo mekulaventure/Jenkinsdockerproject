@@ -10,14 +10,17 @@ pipeline {
                steps {
                     sh 'def server = Artifactory.server 'artifactory server''
 	             sh'  def uploadSpec = {
-                "files": [
-                     	{
-                         "pattern": "target/hello-world",
-                          "target": "MyArtRepo/${BUILD_NUMBER}/"
-          		}
-          ]
-         	   }
-               }
-          }'
+                def uploadSpec = """{
+  		"files": [
+    			{
+      			"pattern": "target/hello-world",
+            		"target": "MyArtRepo/${BUILD_NUMBER}/"
+    				}
+ 				]
+			}"""
+		       server.upload(uploadSpec)
+               }'
+          }
+       }
      }
 }
