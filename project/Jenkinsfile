@@ -1,12 +1,12 @@
 pipeline {
            agent any
            stages {
-                stage("Checkout") {
+                stage('Checkout') {
                      steps {
-                          scm
+                          scm checkout
                      }
                 }
-		   stage("hello-world") { 
+		   stage('hello-world') { 
 			   steps {
 				   echo "Hello world!"
 			   }
