@@ -3,7 +3,7 @@ pipeline {
      stages {
           stage('Build Image') {
                steps {
-                  app = docker.build("emma1")
+                  sh "app = docker.build("emma1")"
                }
           }
           stage('Second Stage') {
