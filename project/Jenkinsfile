@@ -6,7 +6,7 @@ pipeline {
                           scm checkout
                      }
                 }
-		   stege("hello-world") { 
+		   stage("hello-world") { 
 			   steps {
 				   echo "Hello world!"
 			   }
