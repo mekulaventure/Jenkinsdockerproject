@@ -1,9 +1,9 @@
 pipeline {
      agent any
      stages {
-          stage('Build Image') {
+          stage("checkout") {
                steps {
-                  sh "app = docker.build("emma1")"
+                 git https://github.com/mekulaventure/Jenkinsdockerproject.git
                }
           }
           stage('Second Stage') {
