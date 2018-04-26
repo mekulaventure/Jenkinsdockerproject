@@ -8,9 +8,10 @@ pipeline {
           }
           stage('deploy stage Stage') {
                steps {
-                     def server = Artifactory.server 'artifactory server'
-	               def uploadSpec = {
-                def uploadSpec = """{
+		       script{
+                       def server = Artifactory.server 'artifactory server'
+	               
+                       def uploadSpec = """{
   		"files": [
     			{
       			"pattern": "target/hello-world",
@@ -19,8 +20,8 @@ pipeline {
  				]
 			}"""
 		       server.upload(uploadSpec)
-               }
           }
        }
+      }
      }
 }
