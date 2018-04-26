@@ -6,10 +6,17 @@ pipeline {
                  git url: 'https://github.com/mekulaventure/Jenkinsdockerproject.git'
                }
           }
-          stage('Second Stage') {
+          stage('deploy stage Stage') {
                steps {
-                    sh 'touch file1'
-                    echo 'Step 3. Third time Hello'
+                    def server = Artifactory.server 'artifactory server'
+	               def uploadSpec = """{
+                "files": [
+                     {
+                         "pattern": "target/hello-world",
+                          "target": "MyArtRepo/${BUILD_NUMBER}/"
+          }
+          ]
+         }
                }
           }
      }
