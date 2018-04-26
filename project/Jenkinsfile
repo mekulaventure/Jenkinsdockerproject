@@ -1,9 +1,9 @@
 pipeline {
      agent any
      stages {
-          stage('First Stage') {
+          stage('Build Image') {
                steps {
-                    echo 'Step 1. Hello World'
+                  app = docker.build("emma1")
                }
           }
           stage('Second Stage') {
