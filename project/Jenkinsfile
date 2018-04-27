@@ -6,6 +6,11 @@ pipeline {
                  git url: 'https://github.com/mekulaventure/Jenkinsdockerproject.git'
                }
           }
+	     stage("Build") {
+               steps {
+                   sh 'docker build -t <your username>/node-web-app .'
+               }
+          }
           stage('deploy stage Stage') {
                steps {
 		       script{
