@@ -9,6 +9,7 @@ pipeline {
           stage('deploy stage Stage') {
                steps {
 		       script{
+			       sleep 300
                        def server = Artifactory.server 'artifactory server'
 	               
                        def uploadSpec = """{
