@@ -15,7 +15,7 @@ pipeline {
                        def uploadSpec = """{
   		"files": [
     			{
-      			"pattern": "target/hello-world",
+      			"pattern": "target/emma1",
             		"target": "MyArtRepo/${BUILD_NUMBER}/"
     				}
  				]
