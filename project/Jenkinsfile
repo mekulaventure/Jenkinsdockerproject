@@ -8,7 +8,7 @@ pipeline {
           }
 	     stage("Build") {
                steps {
-                   sh 'echo "Hello world"'
+                   sh 'docker build -t emma1/node-web-app .'
                }
           }
           stage('deploy stage Stage') {
