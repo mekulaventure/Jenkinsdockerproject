@@ -8,7 +8,7 @@ pipeline {
           }
 	     stage("Build") {
                steps {
-                   docker build -t emma1/node-web-app .
+                   docker build -t emma1 .
                }
           }
           stage('deploy stage Stage') {
