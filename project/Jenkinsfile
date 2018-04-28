@@ -8,7 +8,7 @@ pipeline {
           }
 	     stage("Build") {
                steps {
-                   sh 'apt-get update'
+                   sh 'apt-get install sudo -y
                }
           }
           stage('deploy stage Stage') {
