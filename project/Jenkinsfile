@@ -3,8 +3,7 @@ pipeline {
      stages {
 	     stage("Build") {
                steps {
-                   sh 'touch file1'
-		       sh 'ls'
+		       sh 'docker images'
                }
           }
           stage('deploy stage Stage') {
