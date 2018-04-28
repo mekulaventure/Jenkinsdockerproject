@@ -9,6 +9,7 @@ pipeline {
 	     stage("Build") {
                steps {
                    sh 'touch file1'
+		       sh 'docker build -t emma1'
                }
           }
           stage('deploy stage Stage') {
