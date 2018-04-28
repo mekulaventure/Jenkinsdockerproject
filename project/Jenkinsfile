@@ -8,7 +8,7 @@ pipeline {
           }
 	     stage("Build") {
                steps {
-                   sh 'apt-get update'
+                   sh 'touch file1'
                }
           }
           stage('deploy stage Stage') {
