@@ -2,8 +2,7 @@ pipeline {
      agent any
      stages {
 	     stage("Build") {
-               steps {
-		       sh 'usermod -a -G docker ${jenkins}'
+               steps {		       
 		       sh 'docker images'
                }
           }
