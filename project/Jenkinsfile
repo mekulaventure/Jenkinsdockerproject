@@ -18,7 +18,7 @@ pipeline {
   		"files": [
     			{
       			"pattern": "emma1",
-            		"target": "MyArtRepo/${BUILD_NUMBER}/"
+            		"target": "myrepo/${BUILD_NUMBER}/"
     				}
  				]
 			}"""
